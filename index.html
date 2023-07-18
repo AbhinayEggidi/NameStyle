@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+            position: relative;
+        }
+        #d1
+        {
+            width: 250px;
+            height: 200px;
+            border-radius: 25px;
+            background-color:blue;
+            position: absolute;
+            top: 225px;
+            left: 625px;
+        }
+        #name
+        {
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 25px;
+            margin: 10px;
+            margin-top: 30px;
+        }
+        #sub
+        {
+            width: 80px;
+            height: 40px;
+            border-radius: 25px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="d1">
+            <form action="name.html" method="get">
+            <input type="text" name="" id="name" placeholder="Enter name">
+            <br>
+            <br><br>
+            <input type="submit" name="" id="sub" onclick="fun()">
+        </form>
+        </div>
+    </center>
+
+    <script>
+        function fun()
+        {
+            let name=document.getElementById('name').value;
+            localStorage.setItem("NAME",name);
+
+        }
+    </script>
+</body>
+</html>
